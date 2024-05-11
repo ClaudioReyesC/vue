@@ -7,7 +7,7 @@
       <p v-if="!showAllInfo">Gastos Operacionales: {{ creditInfo.gastosOperacionales }}</p>
       <p v-if="!showAllInfo">Máximo Plazo: {{ creditInfo.maximoPlazo }}</p>
       <p v-if="!showAllInfo">Periodo de Gracia: {{ creditInfo.periodoDeGracia.valor }}</p>
-      <button v-if="!showAllInfo" @click="showAllInfo = true" id="vermas">Ver más</button>
+      <button v-if="!showAllInfo" @click="showAllInfo = true" class="button" id="vermas">Ver más</button>
       <div v-if="showAllInfo">
         <h3>{{ creditInfo.banco.nombre }}</h3>
         <p>Tasa de Interés: {{ creditInfo.tasaDeInteres }}</p>
@@ -75,9 +75,10 @@ export default {
   transform: translateX(-50%);
 }
 
-#vermas {
+#vermas,
+#vermenos {
   position: relative;
-  bottom: ;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
 }
